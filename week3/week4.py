@@ -36,8 +36,8 @@ fp = open(filename, 'r')
 text = ''
 for line in fp:
     text += line[:-1]+' '
-text = text.replace(',',' ')
-text = text.replace('.',' ')
+text = text.replace(',',' ')#removing ',' so that it will not be consider in a word. eg 100,200 -> 100 200
+text = text.replace('.',' ')#removing '.' so that it will not be consider in a word. eg hello bro. how are you -> hello bro how are you
 print(text)
 print('word of length 4 and starts with a vowel :',*voweland3letters(text))
 print('currencies :' ,*currency(text))
